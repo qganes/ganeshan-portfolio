@@ -373,7 +373,7 @@ footer {
 
 /* --- RESPONSIVE LAYOUT REMAPPING --- */
 html {
-    font-size: 62.5%; /* Changes base 1rem to 10px for cleaner scaling */
+    font-size: 100%; /* Changes base 1rem to 10px for cleaner scaling */
 }
 
 @media (max-width: 991px) {
