@@ -1,3 +1,4 @@
+/* --- FIXED GOOGLE FONTS PATH --- */
 @import url('https://googleapis.com');
 
 /* --- THEME DESIGN SYSTEMS --- */
@@ -27,13 +28,13 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 100px 9% 20px;
 }
 
 /* --- THEME HEADINGS & IDENTIFIERS --- */
 .heading {
-    font-size: 4.5rem;
-    margin-bottom: 3rem;
+    font-size: 40px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -45,27 +46,27 @@ section {
 header {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    padding: 2rem 10%;
+    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     background: rgba(8, 27, 41, 0.85);
     backdrop-filter: blur(10px);
-    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 24px;
     color: var(--text-color);
     font-weight: 600;
 }
 
 .navbar a {
-    font-size: 1.8rem;
+    font-size: 16px;
     color: var(--text-color);
     font-weight: 500;
-    margin-left: 3.5rem;
+    margin-left: 30px;
     transition: .3s;
 }
 
@@ -73,26 +74,77 @@ header {
     color: var(--main-color);
 }
 
+/* --- HOME LANDING ELEMENTS --- */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.home-content .text-animate {
+    color: var(--main-color);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* --- BALANCED RESIZED PROFILE IMAGE CONTAINER --- */
+.home-img img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 50px var(--main-color);
+}
+
 /* --- THEME BUTTON MODULES --- */
-.btn {
+.btn-box {
+    display: flex;
+}
+
+.btn, .contact-form .btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
-    height: 4.5rem;
+    width: 150px;
+    height: 45px;
     background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .8rem;
-    font-size: 1.6rem;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 15px;
     color: var(--bg-color);
     font-weight: 600;
-    letter-spacing: .1rem;
+    letter-spacing: 1px;
     z-index: 1;
     overflow: hidden;
     transition: .5s;
+    cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, .contact-form .btn:hover {
     color: var(--main-color);
     background: transparent;
 }
@@ -100,7 +152,7 @@ header {
 .outline-btn {
     background: transparent;
     color: var(--main-color);
-    margin-left: 2rem;
+    margin-left: 20px;
 }
 
 .outline-btn:hover {
@@ -112,64 +164,65 @@ header {
 .experience-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 40px;
 }
 
 .experience-column {
-    flex: 1 1 40rem;
+    flex: 1 1 350px;
 }
 
 .experience-column .title {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem 2rem;
+    font-size: 24px;
+    margin: 0 0 15px 20px;
+    color: var(--text-color);
 }
 
 .experience-box {
-    border-left: .2rem solid var(--main-color);
+    border-left: 2px solid var(--main-color);
 }
 
 .experience-content {
     position: relative;
-    padding: 2.5rem;
+    padding: 25px;
     background: var(--second-bg-color);
-    border: .2rem solid transparent;
-    border-radius: .8rem;
-    margin-left: 2rem;
-    margin-bottom: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-bottom: 25px;
     transition: .5s ease;
 }
 
 .experience-content:hover {
     border-color: var(--main-color);
-    transform: translateY(-0.3rem);
+    transform: translateY(-3px);
 }
 
 .experience-content::before {
     content: '';
     position: absolute;
-    top: 2.8rem;
-    left: -3.2rem;
-    width: 2rem;
-    height: 2rem;
+    top: 25px;
+    left: -31px;
+    width: 18px;
+    height: 18px;
     background: var(--main-color);
     border-radius: 50%;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
 }
 
 .experience-content .year {
-    font-size: 1.4rem;
+    font-size: 14px;
     color: var(--main-color);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
 .experience-content h3 {
-    font-size: 2rem;
-    margin-bottom: .5rem;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .experience-content p {
-    font-size: 1.4rem;
+    font-size: 14px;
     line-height: 1.6;
 }
 
@@ -179,62 +232,62 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 25px;
 }
 
 .project-box {
-    flex: 1 1 35rem;
+    flex: 1 1 300px;
     background: var(--second-bg-color);
-    padding: 3rem 2.5rem;
-    border-radius: 1rem;
-    border: .2rem solid transparent;
+    padding: 30px 25px;
+    border-radius: 10px;
+    border: 2px solid transparent;
     transition: .5s ease;
 }
 
 .project-box:hover {
     border-color: var(--main-color);
-    transform: translateY(-0.5rem);
+    transform: translateY(-5px);
 }
 
 .project-box i {
-    font-size: 4rem;
+    font-size: 35px;
     color: var(--main-color);
 }
 
 .project-box h3 {
-    font-size: 2.2rem;
-    margin: 1rem 0;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 .project-box p {
-    font-size: 1.4rem;
+    font-size: 14px;
     line-height: 1.6;
 }
 
 .project-box .tags {
-    margin-top: 1.5rem;
+    margin-top: 15px;
 }
 
 .project-box .tags span {
     display: inline-block;
     background: var(--bg-color);
     color: var(--main-color);
-    padding: .5rem 1rem;
-    font-size: 1.2rem;
-    border-radius: .5rem;
-    margin-right: .5rem;
-    margin-top: .5rem;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 /* --- THEME SKILLS BADGES --- */
 .skills-category {
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
 }
 
 .skills-category h3 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 18px;
+    margin-bottom: 20px;
     color: var(--main-color);
 }
 
@@ -242,48 +295,48 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
-    max-width: 90rem;
+    gap: 15px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .skill-badge {
     background: var(--second-bg-color);
-    border: .2rem solid var(--main-color);
+    border: 2px solid var(--main-color);
     color: var(--text-color);
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
+    padding: 10px 20px;
+    font-size: 14px;
     font-weight: 500;
-    border-radius: .6rem;
+    border-radius: 6px;
     transition: .3s;
 }
 
 .skill-badge:hover {
     background: var(--main-color);
     color: var(--bg-color);
-    box-shadow: 0 0 1.5rem var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
 }
 
 /* --- THEME CERTIFICATE CARDS --- */
 .cert-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
-    max-width: 100rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .cert-box {
     background: var(--second-bg-color);
-    padding: 2.5rem;
-    border-radius: .8rem;
-    border-left: .5rem solid var(--main-color);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--main-color);
     transition: .3s;
 }
 
 .cert-box:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 1.5rem rgba(0, 171, 240, 0.2);
+    box-shadow: 0 0 15px rgba(0, 171, 240, 0.2);
 }
 
 /* --- THEME INTERACTIVE CONTACT FORM --- */
@@ -291,8 +344,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
-    max-width: 80rem;
+    gap: 30px;
+    max-width: 800px;
     margin: 0 auto;
     width: 100%;
 }
@@ -300,23 +353,23 @@ header {
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 20px;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .info-box {
     background: var(--second-bg-color);
-    padding: 2rem;
-    border-radius: .8rem;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    flex: 1 1 20rem;
+    flex: 1 1 200px;
 }
 
 .info-box i {
-    font-size: 2.5rem;
+    font-size: 24px;
     color: var(--main-color);
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
 .contact-form {
@@ -333,13 +386,13 @@ header {
 .contact-form .input-box input,
 .contact-form textarea {
     width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
+    padding: 15px;
+    font-size: 15px;
     color: var(--text-color);
     background: var(--second-bg-color);
-    border-radius: .8rem;
-    margin: .8rem 0;
-    border: .2rem solid transparent;
+    border-radius: 8px;
+    margin: 8px 0;
+    border: 2px solid transparent;
     transition: .3s;
 }
 
@@ -356,33 +409,29 @@ header {
     resize: none;
 }
 
-.contact-form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
-}
-
 /* --- THEME FOOTER --- */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 9%;
+    padding: 20px 9%;
     background: var(--bg-color);
-    border-top: .1rem solid var(--second-bg-color);
+    border-top: 1px solid var(--second-bg-color);
 }
 
-/* --- RESPONSIVE LAYOUT REMAPPING --- */
+/* --- RESPONSIVE ADJUSTMENTS --- */
 html {
-    font-size: 100%; /* Changes base 1rem to 10px for cleaner scaling */
+    font-size: 100%; /* Keeps baseline text standard and fully legible */
 }
 
 @media (max-width: 991px) {
-    header { padding: 2rem 3%; }
-    section { padding: 10rem 3% 2rem; }
+    header { padding: 20px 3%; }
+    section { padding: 80px 3% 20px; }
 }
 
 @media (max-width: 768px) {
-    html { font-size: 55%; }
-    .experience-row { gap: 3rem; }
+    .home { flex-direction: column-reverse; text-align: center; justify-content: center; }
+    .home-img img { width: 220px; height: 220px; margin-bottom: 20px; }
     .contact-form .input-box input { width: 100%; }
+    .btn-box { justify-content: center; }
 }
